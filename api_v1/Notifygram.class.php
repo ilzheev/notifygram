@@ -60,9 +60,9 @@ class Notifygram
     protected function make_request(array $params = array())
     {
         $params = $this->join_array_values($params);
-        $sign = $this->generate_sign($params);
+        $signed_hash = $this->generate_sign($params);
 
-        $post = http_build_query(array_merge($params, array('sign' => $sign)), '', '&');
+        $post = http_build_query(array_merge($params, array('sign' => $signed_hash)), '', '&');
         
         if (function_exists('curl_init')) {
             $ch = curl_init($this->url);
@@ -105,3 +105,4 @@ class Notifygram
     }
 
 }
+?>
