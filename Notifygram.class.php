@@ -11,7 +11,6 @@ class Notifygram
     protected
         $api_key       = null,
         $api_token        = null,
-        $sign 		= null,
         $url        = 'https://notifygram.org/api/v1',
         $response   = null;
 
@@ -19,11 +18,10 @@ class Notifygram
 	 * Notifygram declaration
 	 */
 	 
-    public function Notifygram($api_key, $api_token, $sign = null, $url = 'https://notifygram.org/api/v1')
+    public function Notifygram($api_key, $api_token, $url = 'https://notifygram.org/api/v1')
     {
         $this->api_key = $api_key;
         $this->api_token = $api_token;
-        $this->sign = $sign;
         $this->url = $url;
     }
 
@@ -60,9 +58,7 @@ class Notifygram
     protected function make_request(array $params = array())
     {
         $params = $this->join_array_values($params);
-        $signed_hash = $this->generate_sign($params);
-
-        $post = http_build_query(array_merge($params, array('sign' => $signed_hash)), '', '&');
+        $post = http_build_query($params, '', '&');
         
         if (function_exists('curl_init')) {
             $ch = curl_init($this->url);
@@ -99,10 +95,5 @@ class Notifygram
         }
         return $result;
     }
-    protected function generate_sign(array $params)
-    {
-        return md5(sha1(join('', $params) . $this->sign));
-    }
 
 }
-?>
