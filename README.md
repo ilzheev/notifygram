@@ -28,4 +28,4 @@ $notifygram = new Notifygram($project_api_key, $project_token, 0);
 API is available here: https://notifygram.org/api
 
 ###Feedback
-If you have any ideas, feel free to write me directly in Telegram: @ilzheev
+If you have any ideas feel free to write me directly in Telegram: @ilzheev
