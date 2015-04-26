@@ -12,17 +12,19 @@ class Notifygram
         $api_key       = null,
         $api_token        = null,
         $url        = 'https://notifygram.org/api/v1',
+        $show_project_name = 1,
         $response   = null;
 
 	/**
 	 * Notifygram declaration
 	 */
 	 
-    public function Notifygram($api_key, $api_token, $url = 'https://notifygram.org/api/v1')
+    public function Notifygram($api_key, $api_token, $show_project_name = 1, $url = 'https://notifygram.org/api/v1')
     {
         $this->api_key = $api_key;
         $this->api_token = $api_token;
         $this->url = $url;
+        $this->show_project_name = $show_project_name;
     }
 
     /**
@@ -40,6 +42,7 @@ class Notifygram
             'api_key'    => $this->api_key,
             'api_token'       => $this->api_token,
             'message'        => $message,
+            'show_project_name' => $this->show_project_name
         );
 
         $response = $this->make_request($params);
