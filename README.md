@@ -14,5 +14,14 @@ $notifygram = new Notifygram($project_api_key, $project_token);
 $notifygram->notify($message);
 ?>
 ```
+
+####Usage of param 'show_project_name'
+By default the #project_name is appended at the beginning of each message.
+With param 'show_project_name'=0 you can disable this feature.
+```
+<?php
+$notifygram = new Notifygram($project_api_key, $project_token, 0);
+?>
+```
 ###Feedback
 If you have any ideas, feel free to write me directly in Telegram: @ilzheev
