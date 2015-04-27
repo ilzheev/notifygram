@@ -14,6 +14,7 @@ $notifygram = new Notifygram($project_api_key, $project_token);
 $notifygram->notify($message);
 ?>
 ```
+You can use line breaks \n in $message text.
 
 ####Usage of param 'show_project_name'
 By default the #project_name is appended at the beginning of each message.
