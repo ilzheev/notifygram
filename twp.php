@@ -9,6 +9,7 @@ Description: Allows user to recieve WordPress notifications in their Telegram ac
 Author: Baloot Studio
 Version: 1.0
 Author URI: http://ameer.ir/
+License: GPLv2 or later.
 */
 $twp_settings = 
 // create custom plugin settings menu
