@@ -1,6 +1,6 @@
 # Notifygram
 Notifygram is a free service for sending notifications directly to Telegram.
-The plugin allows user to recieve WordPress notifications in their Telegram account.
+The plugin allows user to receive WordPress notifications in their Telegram account.
 
 ###Connect Notifygram to WordPress site
 1. Install Telegram for WordPress plugin and activate it on your WordPress site
