@@ -5,14 +5,13 @@
  */
 /*
 Plugin Name: Telegram for Wordpress
-Description: Allows user to recieve WordPress email-notifications in their Telegram account. This plugin based on notifygram.org by Anton Ilzheev.
+Description: Allows user to recieve WordPress notifications in their Telegram account. This plugin based on notifygram.org by Anton Ilzheev.
 Author: Baloot Studio
 Version: 1.0
 Author URI: http://ameer.ir/
 */
 $twp_settings = 
 // create custom plugin settings menu
-
 add_action('admin_menu', 'twp_create_menu');
 function twp_create_menu() {
 	//create new top-level menu
@@ -67,7 +66,7 @@ function twp_settings_page() {
     }
 // Checks if TOKEN and API has been set. If not, show a warning message.
 if (get_option('twp_api_key') && get_option('twp_api_token') ) {
-    require_once("notifygram.php");
+    require_once("Notifygram.class.php");
 	//This will get information about sent mail from PHPMailer and send it to user
     function twp_mail_action($result, $to, $cc, $bcc, $subject, $body){
         $nt = new Notifygram();
