@@ -1,13 +1,32 @@
 # Notifygram
 Notifygram is a free service for sending notifications directly to Telegram.
-The plugin allows user to receive WordPress notifications in their Telegram account.
 
-###Connect Notifygram to WordPress site
-1. Install Telegram for WordPress plugin and activate it on your WordPress site
-2. Connect Notifygram at https://notifygram.org
-3. Create a project
-4. Add telegram users you want to receive notifications
-5. Copy API key and API token of your project and paste them in plugin settings page 
+###Connect Notifygram
+1. Connect Notifygram at https://notifygram.org
+2. Create a project
+3. Add telegram users you want to receive notifications
+
+###Embed Notifygram.class.php
+```
+<?php
+require_once("Notifygram.class.php");
+$notifygram = new Notifygram($project_api_key, $project_token);
+$notifygram->notify($message);
+?>
+```
+You can use line breaks \n in $message text.
+
+####Usage of param 'show_project_name'
+By default the #project_name is appended at the beginning of each message.
+With param 'show_project_name'=0 you can disable this feature.
+```
+<?php
+$notifygram = new Notifygram($project_api_key, $project_token, 0);
+?>
+```
+
+### Notifygram API
+API is available here: https://notifygram.org/api
 
 ###Feedback
-Call me on Telegram: @ameer_mousavi
+If you have any ideas feel free to write me directly in Telegram: @ilzheev
