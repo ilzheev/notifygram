@@ -16,15 +16,6 @@ $notifygram->notify($message);
 ```
 You can use line breaks \n in $message text.
 
-####Usage of param 'show_project_name'
-By default the #project_name is appended at the beginning of each message.
-With param 'show_project_name'=0 you can disable this feature.
-```
-<?php
-$notifygram = new Notifygram($project_api_key, $project_token, 0);
-?>
-```
-
 ### Notifygram API
 API is available here: https://notifygram.org/api
 
