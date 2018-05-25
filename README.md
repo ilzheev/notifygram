@@ -1,12 +1,12 @@
 # Notifygram
 Notifygram is a free service for sending notifications directly to Telegram.
 
-###Connect Notifygram
+### Connect Notifygram
 1. Connect Notifygram at https://notifygram.org
 2. Create a project
 3. Add telegram users you want to receive notifications
 
-###Embed Notifygram.class.php
+### Embed Notifygram.class.php
 ```
 <?php
 require_once("Notifygram.class.php");
@@ -22,5 +22,5 @@ API is available here: https://notifygram.org/api
 ### Plugins
 - Wordpress plugin by @ameer_mousavi
 
-###Feedback
+### Feedback
 If you have any ideas feel free to write me directly in Telegram: @ilzheev
